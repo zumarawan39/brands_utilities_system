@@ -1,0 +1,307 @@
+// Brand-specific CSS custom properties
+
+// Default brand colors (will be overridden by JavaScript)
+$brand-primary: #10b981;
+$brand-secondary: #64748b;
+$brand-accent: #f59e0b;
+$brand-background: #ffffff;
+$brand-surface: #f8fafc;
+$brand-text-primary: #1e293b;
+$brand-text-secondary: #64748b;
+$brand-text-disabled: #94a3b8;
+$brand-border: #e2e8f0;
+$brand-success: #10b981;
+$brand-warning: #f59e0b;
+$brand-error: #ef4444;
+$brand-info: #3b82f6;
+
+// Brand color utility classes
+.brand {
+  &-primary {
+    color: $brand-primary;
+  }
+
+  &-secondary {
+    color: $brand-secondary;
+  }
+
+  &-accent {
+    color: $brand-accent;
+  }
+
+  &-success {
+    color: $brand-success;
+  }
+
+  &-warning {
+    color: $brand-warning;
+  }
+
+  &-error {
+    color: $brand-error;
+  }
+
+  &-info {
+    color: $brand-info;
+  }
+}
+
+// Brand background utility classes
+.brand-bg {
+  &-primary {
+    background-color: $brand-primary;
+  }
+
+  &-secondary {
+    background-color: $brand-secondary;
+  }
+
+  &-accent {
+    background-color: $brand-accent;
+  }
+
+  &-success {
+    background-color: $brand-success;
+  }
+
+  &-warning {
+    background-color: $brand-warning;
+  }
+
+  &-error {
+    background-color: $brand-error;
+  }
+
+  &-info {
+    background-color: $brand-info;
+  }
+
+  &-surface {
+    background-color: $brand-surface;
+  }
+
+  &-background {
+    background-color: $brand-background;
+  }
+}
+
+// Brand border utility classes
+.brand-border {
+  &-primary {
+    border-color: $brand-primary;
+  }
+
+  &-secondary {
+    border-color: $brand-secondary;
+  }
+
+  &-accent {
+    border-color: $brand-accent;
+  }
+
+  &-success {
+    border-color: $brand-success;
+  }
+
+  &-warning {
+    border-color: $brand-warning;
+  }
+
+  &-error {
+    border-color: $brand-error;
+  }
+
+  &-info {
+    border-color: $brand-info;
+  }
+
+  &-default {
+    border-color: $brand-border;
+  }
+}
+
+// Brand text utility classes
+.brand-text {
+  &-primary {
+    color: $brand-text-primary;
+  }
+
+  &-secondary {
+    color: $brand-text-secondary;
+  }
+
+  &-disabled {
+    color: $brand-text-disabled;
+  }
+}
+
+// Brand button styles
+.brand-button {
+  &-primary {
+    background-color: $brand-primary;
+    color: white;
+    border: 1px solid $brand-primary;
+
+    &:hover {
+      background-color: darken($brand-primary, 10%);
+      border-color: darken($brand-primary, 10%);
+    }
+
+    &:disabled {
+      background-color: $brand-text-disabled;
+      border-color: $brand-text-disabled;
+      color: white;
+    }
+  }
+
+  &-secondary {
+    background-color: $brand-secondary;
+    color: white;
+    border: 1px solid $brand-secondary;
+
+    &:hover {
+      background-color: darken($brand-secondary, 10%);
+      border-color: darken($brand-secondary, 10%);
+    }
+  }
+
+  &-outline {
+    background-color: transparent;
+    color: $brand-primary;
+    border: 1px solid $brand-primary;
+
+    &:hover {
+      background-color: $brand-primary;
+      color: white;
+    }
+  }
+}
+
+// Brand card styles
+.brand-card {
+  background-color: $brand-background;
+  border: 1px solid $brand-border;
+  border-radius: 8px;
+  padding: 1rem;
+
+  &-surface {
+    background-color: $brand-surface;
+  }
+
+  &-primary {
+    border-left: 4px solid $brand-primary;
+  }
+
+  &-success {
+    border-left: 4px solid $brand-success;
+  }
+
+  &-warning {
+    border-left: 4px solid $brand-warning;
+  }
+
+  &-error {
+    border-left: 4px solid $brand-error;
+  }
+}
+
+// Brand input styles
+.brand-input {
+  border: 1px solid $brand-border;
+  background-color: $brand-background;
+  color: $brand-text-primary;
+
+  &:focus {
+    border-color: $brand-primary;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($brand-primary, 0.1);
+  }
+
+  &:disabled {
+    background-color: $brand-surface;
+    color: $brand-text-disabled;
+  }
+
+  &-error {
+    border-color: $brand-error;
+
+    &:focus {
+      border-color: $brand-error;
+      box-shadow: 0 0 0 2px rgba($brand-error, 0.1);
+    }
+  }
+}
+
+// Brand status indicators
+.brand-status {
+  &-success {
+    color: $brand-success;
+  }
+
+  &-warning {
+    color: $brand-warning;
+  }
+
+  &-error {
+    color: $brand-error;
+  }
+
+  &-info {
+    color: $brand-info;
+  }
+}
+
+// Brand loading spinner
+.brand-spinner {
+  border: 2px solid $brand-border;
+  border-top: 2px solid $brand-primary;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: brand-spin 1s linear infinite;
+}
+
+@keyframes brand-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Brand logo styles
+.brand-logo {
+  &-light {
+    filter: brightness(0) saturate(100%) invert(0%);
+  }
+
+  &-dark {
+    filter: brightness(0) saturate(100%) invert(100%);
+  }
+}
+
+// Responsive brand utilities
+@media (max-width: 768px) {
+  .brand-responsive {
+    &-hide {
+      display: none;
+    }
+
+    &-show {
+      display: block;
+    }
+  }
+}
+
+// Dark mode support (if needed)
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Dark mode brand colors can be overridden here
+    $brand-background: #1a1a1a;
+    $brand-surface: #2a2a2a;
+    $brand-text-primary: #ffffff;
+    $brand-text-secondary: #a0a0a0;
+    $brand-border: #404040;
+  }
+}

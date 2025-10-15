@@ -1,0 +1,71 @@
+.brandSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: var(--brand-surface);
+  border: 1px solid var(--brand-border);
+}
+
+.currentBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background-color: var(--brand-background);
+}
+
+.brandLogo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.brandName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--brand-text-primary);
+}
+
+.brandSelect {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--brand-border);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 2px rgba(var(--brand-primary), 0.1);
+  }
+
+  &:hover {
+    border-color: var(--brand-primary);
+  }
+
+  option {
+    background-color: var(--brand-background);
+    color: var(--brand-text-primary);
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .brandSwitcher {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .currentBrand {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .brandSelect {
+    width: 100%;
+  }
+}

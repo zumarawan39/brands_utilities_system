@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router =useRouter()
   return (
     <header className="w-full border-b border-gray-200 dark:border-gray-800 bg-background">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -14,18 +17,10 @@ export default function Header() {
           </div>
         </div>
         <nav className="hidden sm:flex gap-6 items-center">
-          <a className="text-sm hover:underline" href="#about">
-            About
+          <a className="text-sm hover:underline" onClick={() => {router.push("/zustand")}}>
+            Zustand
           </a>
-          <a className="text-sm hover:underline" href="#services">
-            Services
-          </a>
-          <a className="text-sm hover:underline" href="#contact">
-            Contact
-          </a>
-          <a className="ml-2 px-3 py-1 rounded-full bg-foreground text-background text-sm" href="#">
-            Get started
-          </a>
+     
         </nav>
       </div>
     </header>
